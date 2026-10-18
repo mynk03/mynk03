@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Publish this folder to github.com/mynk03/mynk03 (the profile README repo).
 #
-#   ./scripts/publish.sh            refresh auto sections, commit, push
-#   ./scripts/publish.sh --refresh  only refresh README auto sections locally (no push)
+#   ./scripts/publish.sh            commit and push
 #
 # Reads PAT_FINED_GRAIN_01 (or GITHUB_PAT) from ../.env (mynk/.env). The token is never written to git config or disk.
 set -euo pipefail
@@ -23,9 +22,6 @@ export GH_TOKEN="$GITHUB_PAT"
 login=$(gh api user --jq .login)
 [[ "$login" == "$OWNER" ]] || { echo "error: token belongs to '$login', expected '$OWNER'. Aborting." >&2; exit 1; }
 echo "token ok: $login"
-
-bash .github/scripts/update-readme.sh
-[[ "${1:-}" == "--refresh" ]] && exit 0
 
 if ! gh api "repos/$REPO" >/dev/null 2>&1; then
   echo "creating public repo $REPO"
