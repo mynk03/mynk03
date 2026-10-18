@@ -10,9 +10,9 @@
 
 I'm a backend engineer building production services in **Go and Node.js**: REST APIs, event-driven pipelines on **RabbitMQ**, real-time systems over **WebSockets**, and Web3 infrastructure such as **EIP-4337** account abstraction and gasless transaction relayers. Over 2+ years I've built a REST API serving **100,000+ users**, cut data processing time by **30%** through query and index tuning, and shipped a Go relayer that cut cross-chain message latency by **45%**.
 
-Currently: **System Analyst at Ancilar** (Indore) — Go relayers, blockchain node infrastructure, and smart-account backends, with 85%+ unit test coverage across Go modules.
+Currently: **System Analyst at Ancilar** (Indore) - Go relayers, blockchain node infrastructure, and smart-account backends, with 85%+ unit test coverage across Go modules.
 
-> **Open to:** backend engineering roles — Go / Node.js services, distributed and event-driven systems, Web3 infrastructure. [Reach out →](mailto:mayank4code@gmail.com)
+> **Open to:** backend engineering roles - Go / Node.js services, distributed and event-driven systems, Web3 infrastructure. [Reach out →](mailto:mayank4code@gmail.com)
 
 ## Stack
 
@@ -78,12 +78,12 @@ Currently: **System Analyst at Ancilar** (Indore) — Go relayers, blockchain no
 <!-- START:projects -->
 | Repository | Description | Stack |
 | --- | --- | --- |
-| [ai-backend-roadmap](https://github.com/mynk03/ai-backend-roadmap) | — | JavaScript |
+| [ai-backend-roadmap](https://github.com/mynk03/ai-backend-roadmap) | - | JavaScript |
 | [neetcode-submissions](https://github.com/mynk03/neetcode-submissions) | My NeetCode.io problem submissions | C++ |
-| [blocky-txn](https://github.com/mynk03/blocky-txn) | Blockchain Simulation  | — |
+| [blocky-txn](https://github.com/mynk03/blocky-txn) | Blockchain Simulation  | - |
 | [Udyam_Uplift](https://github.com/mynk03/Udyam_Uplift) | Deploying Client on Vercel | JavaScript |
 | [mayank-portfolio](https://github.com/mynk03/mayank-portfolio) | A personal portfolio website showcasing my skills, projects, and contact information, designed to highlight my expertise and facilitate direct communication. | JavaScript |
-| [transaction_manager](https://github.com/mynk03/transaction_manager) | — | JavaScript, C++ |
+| [transaction_manager](https://github.com/mynk03/transaction_manager) | - | JavaScript, C++ |
 <!-- END:projects -->
 
 ## Open Source
@@ -95,7 +95,7 @@ Currently: **System Analyst at Ancilar** (Indore) — Go relayers, blockchain no
 <details>
 <summary><b><a href="https://github.com/cc-vb/voicebridge">cc-vb / voicebridge</a></b> &middot; 1 PR &middot; <a href="https://github.com/cc-vb/voicebridge/pulls?q=author%3Amynk03+is%3Apr">view all →</a></summary>
 
-- [`#1`](https://github.com/cc-vb/voicebridge/pull/1) — Give the microphone back when voice ends
+- [`#1`](https://github.com/cc-vb/voicebridge/pull/1) - Give the microphone back when voice ends
 
 </details>
 

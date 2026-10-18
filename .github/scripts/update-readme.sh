@@ -17,7 +17,7 @@ gh api "users/$USER/repos?per_page=100&sort=pushed&type=owner" \
       ($exclude | split(" ")) as $ex
       | [.[] | select(.fork == false and .private == false and .size > 0 and .name != $user
                       and (.name as $n | $ex | index($n) | not))][:6]
-      | .[] | "\(.full_name)|\(.html_url)|\((.description // "—") | gsub("\\|"; "\\|"))"' \
+      | .[] | "\(.full_name)|\(.html_url)|\((.description // "-") | gsub("\\|"; "\\|"))"' \
   > "$TMPDIR/repos_meta"
 
 # Stack via /languages: prefer backend / typed languages, drop markup and tooling.
@@ -46,7 +46,7 @@ resolve_stack() {
   echo "| --- | --- | --- |"
   while IFS='|' read -r repo url desc; do
     stack=$(resolve_stack "$repo")
-    [ -z "$stack" ] && stack="—"
+    [ -z "$stack" ] && stack="-"
     echo "| [${repo#*/}]($url) | $desc | $stack |"
   done < "$TMPDIR/repos_meta"
 } > "$TMPDIR/projects.md"
@@ -75,7 +75,7 @@ gh search prs --author="$USER" --limit=1000 --json repository,title,url,state --
               + (.count | tostring) + " PR" + (if .count > 1 then "s" else "" end)
               + " &middot; <a href=\"https://github.com/" + .repo + "/pulls?q=author%3A" + $user + "+is%3Apr\">view all →</a>"
               + "</summary>\n\n"
-              + (.prs | map("- [`#" + .num + "`](" + .url + ") — " + .title) | join("\n"))
+              + (.prs | map("- [`#" + .num + "`](" + .url + ") - " + .title) | join("\n"))
               + "\n\n</details>"
             ) | join("\n\n"))
           + "\n\n</details>"
