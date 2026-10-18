@@ -4,7 +4,7 @@
 #   ./scripts/publish.sh            refresh auto sections, commit, push
 #   ./scripts/publish.sh --refresh  only refresh README auto sections locally (no push)
 #
-# Reads GITHUB_PAT from ../.env (mynk/.env). The token is never written to git config or disk.
+# Reads PAT_FINED_GRAIN_01 (or GITHUB_PAT) from ../.env (mynk/.env). The token is never written to git config or disk.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -13,8 +13,11 @@ REPO="$OWNER/$OWNER"
 ENV_FILE="../.env"
 
 [[ -f "$ENV_FILE" ]] || { echo "error: $ENV_FILE not found (add GITHUB_PAT=... there)" >&2; exit 1; }
-GITHUB_PAT=$(grep -E '^GITHUB_PAT=' "$ENV_FILE" | head -1 | cut -d= -f2- | tr -d '"'"'"' \r')
-[[ -n "$GITHUB_PAT" ]] || { echo "error: GITHUB_PAT is empty in $ENV_FILE" >&2; exit 1; }
+# Prefer the fine-grained token; GITHUB_PAT is accepted as an override.
+read_env() { { grep -E "^$1=" "$ENV_FILE" || true; } | head -1 | cut -d= -f2- | tr -d '"'"'"' \r'; }
+GITHUB_PAT=$(read_env GITHUB_PAT)
+[[ -n "$GITHUB_PAT" ]] || GITHUB_PAT=$(read_env PAT_FINED_GRAIN_01)
+[[ -n "$GITHUB_PAT" ]] || { echo "error: no GITHUB_PAT or PAT_FINED_GRAIN_01 in $ENV_FILE" >&2; exit 1; }
 export GH_TOKEN="$GITHUB_PAT"
 
 login=$(gh api user --jq .login)

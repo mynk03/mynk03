@@ -15,7 +15,7 @@ EXCLUDE="mayank4code DiceGame DrumKit Guess-The-Number Simon-Game To-Do-List kee
 gh api "users/$USER/repos?per_page=100&sort=pushed&type=owner" \
   | jq -r --arg user "$USER" --arg exclude "$EXCLUDE" '
       ($exclude | split(" ")) as $ex
-      | [.[] | select(.fork == false and .private == false and .name != $user
+      | [.[] | select(.fork == false and .private == false and .size > 0 and .name != $user
                       and (.name as $n | $ex | index($n) | not))][:6]
       | .[] | "\(.full_name)|\(.html_url)|\((.description // "—") | gsub("\\|"; "\\|"))"' \
   > "$TMPDIR/repos_meta"

@@ -76,11 +76,30 @@ Currently: **System Analyst at Ancilar** (Indore) — Go relayers, blockchain no
 ## Recent Repositories
 
 <!-- START:projects -->
+| Repository | Description | Stack |
+| --- | --- | --- |
+| [ai-backend-roadmap](https://github.com/mynk03/ai-backend-roadmap) | — | JavaScript |
+| [neetcode-submissions](https://github.com/mynk03/neetcode-submissions) | My NeetCode.io problem submissions | C++ |
+| [blocky-txn](https://github.com/mynk03/blocky-txn) | Blockchain Simulation  | — |
+| [Udyam_Uplift](https://github.com/mynk03/Udyam_Uplift) | Deploying Client on Vercel | JavaScript |
+| [mayank-portfolio](https://github.com/mynk03/mayank-portfolio) | A personal portfolio website showcasing my skills, projects, and contact information, designed to highlight my expertise and facilitate direct communication. | JavaScript |
+| [transaction_manager](https://github.com/mynk03/transaction_manager) | — | JavaScript, C++ |
 <!-- END:projects -->
 
 ## Open Source
 
 <!-- START:ecosystem -->
+<details>
+<summary><b>1 PR across 1 repo</b> &nbsp;<sub><i>(click to expand)</i></sub></summary>
+
+<details>
+<summary><b><a href="https://github.com/cc-vb/voicebridge">cc-vb / voicebridge</a></b> &middot; 1 PR &middot; <a href="https://github.com/cc-vb/voicebridge/pulls?q=author%3Amynk03+is%3Apr">view all →</a></summary>
+
+- [`#1`](https://github.com/cc-vb/voicebridge/pull/1) — Give the microphone back when voice ends
+
+</details>
+
+</details>
 <!-- END:ecosystem -->
 
 ## Highlights
