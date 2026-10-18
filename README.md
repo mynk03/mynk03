@@ -75,7 +75,6 @@ Currently: **System Analyst at Ancilar** (Indore) - Go relayers, blockchain node
 
 ## Highlights
 
-- Promoted from Associate System Analyst to **System Analyst** at Ancilar (Nov 2025).
 - **Podium finish at National Agro Hackathon 2023** among 200+ teams (WasteConnect).
 - Max LeetCode contest rating **1850** · **5-Star in C++** on HackerRank.
 
