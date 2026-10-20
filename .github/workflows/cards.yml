@@ -24,7 +24,7 @@ jobs:
       # A failed card keeps the previous SVG instead of writing an error card.
       - name: Stats card
         continue-on-error: true
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ env.USER_NAME }}&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&border_radius=10&bg_color=${{ env.BG }}&title_color=${{ env.ACCENT }}&ring_color=${{ env.ACCENT }}&icon_color=${{ env.ICON }}&text_color=${{ env.TEXT }}
@@ -34,7 +34,7 @@ jobs:
 
       - name: Top languages card
         continue-on-error: true
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=${{ env.USER_NAME }}&layout=compact&langs_count=8&hide_border=true&border_radius=10&bg_color=${{ env.BG }}&title_color=${{ env.ACCENT }}&text_color=${{ env.TEXT }}
