@@ -1,0 +1,77 @@
+name: Profile Cards
+
+on:
+  schedule:
+    - cron: '13 3 * * *'  # 08:43 IST daily
+  workflow_dispatch:
+
+jobs:
+  cards:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    env:
+      USER_NAME: mynk03
+      LEETCODE_USER: mynk03
+      # shared palette: card bg, title/ring, icons, text
+      BG: '151515'
+      ACCENT: 'C13CCC'
+      ICON: 'E4572E'
+      TEXT: 'E6EDF3'
+    steps:
+      - uses: actions/checkout@v7
+
+      # A failed card keeps the previous SVG instead of writing an error card.
+      - name: Stats card
+        continue-on-error: true
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ env.USER_NAME }}&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&border_radius=10&bg_color=${{ env.BG }}&title_color=${{ env.ACCENT }}&ring_color=${{ env.ACCENT }}&icon_color=${{ env.ICON }}&text_color=${{ env.TEXT }}
+          path: profile/stats.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Top languages card
+        continue-on-error: true
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ env.USER_NAME }}&layout=compact&langs_count=8&hide_border=true&border_radius=10&bg_color=${{ env.BG }}&title_color=${{ env.ACCENT }}&text_color=${{ env.TEXT }}
+          path: profile/top-langs.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Streak and LeetCode cards
+        run: |
+          fetch() {
+            local url=$1 out=$2 tmp
+            tmp=$(mktemp)
+            if curl -fsSL --retry 3 --max-time 60 "$url" -o "$tmp" \
+              && grep -q '<svg' "$tmp" && ! grep -qiE 'something went wrong|not found' "$tmp"; then
+              mv "$tmp" "$out"
+            else
+              echo "::warning::could not fetch $out, keeping previous version"
+            fi
+          }
+          mkdir -p profile
+          fetch "https://streak-stats.demolab.com/?user=${USER_NAME}&hide_border=true&border_radius=10&background=${BG}&stroke=${ACCENT}&ring=${ACCENT}&fire=${ICON}&currStreakNum=${TEXT}&sideNums=${TEXT}&currStreakLabel=${TEXT}&sideLabels=${TEXT}&dates=8B949E" profile/streak.svg
+          fetch "https://leetcard.jacoblin.cool/${LEETCODE_USER}?theme=dark&font=Inter&border=0&radius=10&ext=heatmap" profile/leetcode.svg
+
+      - name: Commit if cards changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          if git diff --staged --quiet; then
+            echo "No card changes."
+            exit 0
+          fi
+          git commit -m "chore(cards): update profile cards"
+          for i in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push rejected, rebasing (attempt $i)..."
+            git pull --rebase origin main
+          done
+          echo "Push failed after 3 attempts." >&2
+          exit 1

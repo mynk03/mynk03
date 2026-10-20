@@ -1,13 +1,3 @@
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mynk03/mynk03/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mynk03/mynk03/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/mynk03/mynk03/output/github-contribution-grid-snake.svg" />
-</picture>
-
-</div>
-
 I'm a backend engineer building production services in **Go and Node.js**: REST APIs, event-driven pipelines on **RabbitMQ**, real-time systems over **WebSockets**, and Web3 infrastructure such as **EIP-4337** account abstraction and gasless transaction relayers. Over 2+ years I've built a REST API serving **100,000+ users**, cut data processing time by **30%** through query and index tuning, and shipped a Go relayer that cut cross-chain message latency by **45%**.
 
 Currently: **System Analyst at Ancilar** (Indore) - Go relayers, blockchain node infrastructure, and smart-account backends, with 85%+ unit test coverage across Go modules.
@@ -85,11 +75,20 @@ Currently: **System Analyst at Ancilar** (Indore) - Go relayers, blockchain node
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=black)](https://leetcode.com/u/mynk03/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/mynk03)
 
-<details>
-<summary><b>📈 GitHub Stats</b> &nbsp;<sub><i>(click to expand)</i></sub></summary>
+## GitHub Stats
 
-<br>
+<div align="center">
 
-![Profile Metrics](https://raw.githubusercontent.com/mynk03/mynk03/main/github-metrics.svg)
+<img src="profile/stats.svg" height="170" alt="GitHub stats" />
+<img src="profile/streak.svg" height="170" alt="GitHub streak" />
 
-</details>
+<img src="profile/top-langs.svg" height="200" alt="Most used languages" />
+<a href="https://leetcode.com/u/mynk03/"><img src="profile/leetcode.svg" height="200" alt="LeetCode stats" /></a>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mynk03/mynk03/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mynk03/mynk03/output/github-contribution-grid-snake.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/mynk03/mynk03/output/github-contribution-grid-snake.svg" />
+</picture>
+
+</div>
