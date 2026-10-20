@@ -7,13 +7,13 @@ on:
 
 jobs:
   metrics:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
     env:
       HAS_TOKEN: ${{ secrets.METRICS_TOKEN != '' }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Skip without METRICS_TOKEN
         if: env.HAS_TOKEN != 'true'
