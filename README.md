@@ -37,7 +37,7 @@ I'm a full stack developer with **2+ years** of full-time experience building AP
 - Built a Go relayer that settles up to **100 gasless tips per transaction**, and another that cut cross-chain message latency by **45%**.
 - Before that, built Yuva Portal's React frontend and 20+ endpoint REST API for **100,000+ users**, with **30%** faster data processing and **99%** uptime.
 
-> **Open to:** full stack and backend roles - TypeScript / Node.js services, React / Next.js products, distributed systems, Web3 and AI-agent platforms. [Reach out →](mailto:mayank4code@gmail.com)
+> **Open to:** full stack and backend roles - TypeScript / Node.js services, React / Next.js products, distributed systems, Web3 and AI-agent platforms. [Reach out →](https://mynk03.co.in/#contact) or email `mayank4code@gmail.com`
 
 ---
 
