@@ -123,17 +123,17 @@ I'm a full stack developer with **2+ years** of full-time experience building AP
 
 ### 🚀 `>` featured work
 
-| Project | What it is | Stack | Links |
-| --- | --- | --- | --- |
-| **FiduWork** | Freelance marketplace with escrow: 10 TypeScript microservices behind a JWT / RBAC gateway, Stripe Connect with idempotent webhooks, optional USDC escrow, BullMQ chain indexer with dead-letter queue, and role-based Next.js apps for clients, freelancers, jurors and admins. | TypeScript, Node.js, MongoDB, BullMQ, Stripe, Next.js | - |
-| **AgenticStudio** | AI-agent platform on the Claude Agent SDK: FastAPI modular monolith with PostgreSQL, Redis and pgvector, each agent isolated in its own Docker container, plus a React / Vite UI for agent creation, marketplace and approvals. | Python, FastAPI, PostgreSQL, Docker, React | - |
-| **SocialFi (DripTip)** | Gasless creator tipping: Go / Gin relayer that queues Permit2-signed tips in RabbitMQ and settles up to 100 per transaction, with Prometheus / Grafana / Loki monitoring, a React Chrome extension and a Next.js claim app. Presented at Yellow Network Hackathon 2025. | Go, Gin, RabbitMQ, MongoDB, Next.js | - |
-| **Wewe** | Solana token launch platform with trading-volume rewards: Helius-to-MongoDB sync workers with distributed locks and deduplication, and aggregation pipelines for reward shares. | TypeScript, Node.js, MongoDB, Helius | - |
-| **HyperDex** | Telegram-driven smart order router across three perp DEXs, scoring venues on depth, price impact and fees to pick one or split the order. | TypeScript, Hyperliquid, Telegram Bot API | - |
-| **HyperPNL** | On-chain prop trading: perp evaluation simulator streaming live PnL over WebSockets, plus an ERC-4337 paymaster and bundler service. | Node.js, TypeScript, WebSockets, ERC-4337 | [live](https://hyperpnl.com/) |
-| **UnitokenSwap** | ERC-7683 intent-based swap protocol: gasless EIP-712 / Permit2 intents, RFQ auctions between fillers, Dutch-auction pricing and partial fills, across 7 Rust microservices. | Rust, Axum, PostgreSQL, Redis | - |
-| **Blocky Txn** | Blockchain simulator: Go execution node sharing transactions over libp2p GossipSub, state in a Merkle Patricia Trie on LevelDB, HTTP and gRPC APIs. | Go, libp2p, gRPC, LevelDB | [code](https://github.com/mynk03/blocky-txn) |
-| **Yuva Portal** | React frontend and 20+ endpoint REST API serving 100,000+ users for Young Indians, on a Linux VPS behind Nginx with 99% uptime. | React, Node.js, Express.js, MongoDB | [live](https://yuvaportal.youngindians.net) |
+| Project | What it is | Stack |
+| --- | --- | --- |
+| **FiduWork** | Freelance marketplace backend: 10 TypeScript microservices with JWT / RBAC, Stripe Connect escrow, and a BullMQ chain indexer. | TypeScript, Node.js, MongoDB, Next.js |
+| **AgenticStudio** | AI-agent platform on the Claude Agent SDK: FastAPI backend with each agent in its own Docker container. | Python, FastAPI, PostgreSQL, React |
+| **SocialFi** | Gasless creator tipping: Go relayer on RabbitMQ that settles up to 100 tips per transaction. Presented at Yellow Network Hackathon 2025. | Go, RabbitMQ, MongoDB, Next.js |
+| **Wewe** | Solana token launch platform: Helius sync workers with distributed locks and trading-volume rewards. | TypeScript, Node.js, MongoDB |
+| **HyperDex** | Telegram-driven smart order router that splits orders across three perp DEXs. | TypeScript, Hyperliquid |
+| **HyperPNL** | On-chain prop trading: perp simulator with live PnL over WebSockets and an ERC-4337 paymaster and bundler. | Node.js, WebSocket, Solidity |
+| **UnitokenSwap** | Intent-based swap protocol: gasless EIP-712 / Permit2 intents and RFQ auctions across 7 Rust microservices. | Rust, Axum, PostgreSQL, Redis |
+| **Blocky Txn** | Blockchain simulator: Go execution node with libp2p gossip, a Merkle Patricia Trie on LevelDB, and gRPC APIs. | Go, libp2p, gRPC, LevelDB |
+| **Yuva Portal** | REST API with 20+ endpoints serving 100,000+ users for Young Indians, with 99% uptime. | Node.js, Express.js, MongoDB |
 
 ---
 
