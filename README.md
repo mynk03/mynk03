@@ -18,7 +18,8 @@
 
 ---
 
-## About Me
+<a id="about"></a>
+<img src="profile/headings/about.svg" alt="About Me" width="100%" />
 
 ```ts
 const mayank = {
@@ -41,7 +42,8 @@ I'm a full stack developer with **2+ years** of full-time experience building AP
 
 ---
 
-## Tech Stack
+<a id="stack"></a>
+<img src="profile/headings/stack.svg" alt="Tech Stack" width="100%" />
 
 <table>
 <tr>
@@ -121,7 +123,8 @@ I'm a full stack developer with **2+ years** of full-time experience building AP
 
 ---
 
-## Featured Work
+<a id="work"></a>
+<img src="profile/headings/work.svg" alt="Featured Work" width="100%" />
 
 | Project | What it is | Stack |
 | --- | --- | --- |
@@ -137,14 +140,16 @@ I'm a full stack developer with **2+ years** of full-time experience building AP
 
 ---
 
-## Highlights
+<a id="highlights"></a>
+<img src="profile/headings/highlights.svg" alt="Highlights" width="100%" />
 
 - **Podium finish at National Agro Hackathon 2023** among 200+ teams (WasteConnect).
 - Presented **SocialFi** at **Yellow Network Hackathon 2025**, IIT Delhi.
 
 ---
 
-## GitHub Stats
+<a id="stats"></a>
+<img src="profile/headings/stats.svg" alt="GitHub Stats" width="100%" />
 
 <div align="center">
 
@@ -166,7 +171,8 @@ I'm a full stack developer with **2+ years** of full-time experience building AP
 
 ---
 
-## Connect
+<a id="connect"></a>
+<img src="profile/headings/connect.svg" alt="Connect" width="100%" />
 
 <p align="center">
   <a href="https://mynk03.co.in/"><img src="https://img.shields.io/badge/Portfolio-C13CCC?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
