@@ -48,7 +48,7 @@ jobs:
             local url=$1 out=$2 tmp
             tmp=$(mktemp)
             if curl -fsSL --retry 3 --max-time 60 "$url" -o "$tmp" \
-              && grep -q '<svg' "$tmp" && ! grep -qiE 'something went wrong|not found' "$tmp"; then
+              && python3 -I -c 'import sys, xml.etree.ElementTree as E; E.parse(sys.argv[1])' "$tmp" && ! grep -qiE 'something went wrong|not found' "$tmp"; then
               mv "$tmp" "$out"
             else
               echo "::warning::could not fetch $out, keeping previous version"
@@ -57,7 +57,7 @@ jobs:
           mkdir -p profile
           fetch "https://streak-stats.demolab.com/?user=${USER_NAME}&hide_border=true&border_radius=10&background=${BG}&stroke=${ACCENT}&ring=${ACCENT}&fire=${ICON}&currStreakNum=${TEXT}&sideNums=${TEXT}&currStreakLabel=${TEXT}&sideLabels=${TEXT}&dates=8B949E" profile/streak.svg
           fetch "https://leetcard.jacoblin.cool/${LEETCODE_USER}?theme=dark&font=Inter&border=0&radius=10&ext=heatmap" profile/leetcode.svg
-          fetch "https://capsule-render.vercel.app/api?type=waving&color=0:150a17,35:7a2a80,70:${ACCENT},100:${ICON}&height=200&section=header&text=Mayank%20Yadav&fontSize=60&fontColor=ffffff&fontAlignY=34&desc=Full%20Stack%20Developer%20%7C%20TypeScript%2C%20Node.js%2C%20React%20%26%20Next.js&descSize=20&descAlignY=56&animation=fadeIn" profile/header.svg
+          fetch "https://capsule-render.vercel.app/api?type=waving&color=0:150a17,35:7a2a80,70:${ACCENT},100:${ICON}&height=200&section=header&text=Mayank%20Yadav&fontSize=60&fontColor=ffffff&fontAlignY=34&desc=Full%20Stack%20Developer%20%7C%20TypeScript%2C%20Node.js%2C%20React%2C%20Next.js&descSize=20&descAlignY=56&animation=fadeIn" profile/header.svg
           fetch "https://capsule-render.vercel.app/api?type=waving&color=0:${ICON},30:${ACCENT},70:7a2a80,100:150a17&height=110&section=footer" profile/footer.svg
           fetch "https://readme-typing-svg.demolab.com?font=Kanit&weight=600&size=24&duration=3000&pause=800&color=${ACCENT}&center=true&vCenter=true&width=620&lines=TypeScript+%26+Node.js+microservices;React+%26+Next.js+products;Payments%2C+queues+%26+real-time+systems;Go+services%2C+AI+agents+%26+Web3" profile/typing.svg
 
