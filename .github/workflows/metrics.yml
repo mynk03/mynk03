@@ -39,6 +39,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # output_action: none leaves the render in /metrics_renders, not the workspace
+          sudo cp /metrics_renders/github-metrics.svg github-metrics.svg
+          sudo chown "$(id -u):$(id -g)" github-metrics.svg
           git add github-metrics.svg
           if git diff --staged --quiet; then
             echo "No SVG changes."
