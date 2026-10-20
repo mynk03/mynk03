@@ -8,8 +8,8 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Mayank's GitHub Stats, Rank: C+</title>
-        <desc id="descId">Total Stars Earned: 0, Total Commits  : 2955, Total PRs: 7, Total Issues: 1, Contributed to (last year): 2</desc>
+        <title id="titleId">Mayank&#39;s GitHub Stats, Rank: C+</title>
+        <desc id="descId">Total Stars Earned: 0, Total Commits  : 2957, Total PRs: 7, Total Issues: 1, Contributed to (last year): 2</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,11 +73,12 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 206.5539388993532;
+        stroke-dashoffset: 206.5464554911855;
       }
     }
   
   
+          
 
           
       /* Animations */
@@ -102,9 +103,15 @@
         </style>
 
         
+        <defs>
+          
+          
+        </defs>
+        
 
         <rect
           data-testid="card-bg"
+          class="card-bg"
           x="0.5"
           y="0.5"
           rx="10"
@@ -126,7 +133,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Mayank's GitHub Stats</text>
+      >Mayank&#39;s GitHub Stats</text>
     </g>
       </g>
     
@@ -159,7 +166,7 @@
       <text class="stat  bold" x="25" y="12.5">Total Stars Earned:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="stars"
       >0</text>
@@ -174,7 +181,7 @@
       <text class="stat  bold" x="25" y="12.5">Total Commits:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="commits"
       >3k</text>
@@ -189,7 +196,7 @@
       <text class="stat  bold" x="25" y="12.5">Total PRs:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="prs"
       >7</text>
@@ -204,7 +211,7 @@
       <text class="stat  bold" x="25" y="12.5">Total Issues:</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="issues"
       >1</text>
@@ -219,7 +226,7 @@
       <text class="stat  bold" x="25" y="12.5">Contributed to (last year):</text>
       <text
         class="stat  bold"
-        x="219.01"
+        x="224.01"
         y="12.5"
         data-testid="contribs"
       >2</text>
